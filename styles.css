@@ -1,0 +1,446 @@
+/* Base Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Layer 1: Background */
+.background-layer {
+  background: url('banner2.png') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transform: scale(1.05);
+}
+
+.mountain-layer {
+  background: url('mountains2.png') no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  transform: scale(1.05);
+  
+}
+
+.mountain-img {
+  width: 100%;
+}
+
+/* Layer 3: Title Image */
+.hero {
+  transform: translateY(30vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: riseAndFadeIn 1.5s ease-out forwards;
+}
+@keyframes riseAndFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.title {
+  margin-top: -6vh;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  padding: 1rem;
+  background-color: transparent;
+}
+
+.title-image {
+  max-height: 100%;
+  max-width: 48vw;
+  height: auto;
+  width: auto;
+}
+.footer-image {
+  max-height: 100%;
+  max-width: clamp(64px, 15vw,200px);
+  height: auto;
+  width: auto;
+  margin: clamp(5px, 1vw,16px);
+}
+
+/* Scrollable content section */
+.content-section {
+  position: relative;
+  z-index: 2;
+  padding-top: 2rem;
+  padding-bottom: 100px;
+  background: transparent;
+}
+
+/* Boxes */
+.box {
+  background-color: #090909d0;
+  margin:0;
+  padding:0;
+  gap: 0;
+  backdrop-filter: blur(10px);
+  margin: 0 auto;
+  width:66%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  height: fit-content;
+  min-width: 800px;
+  max-width: 100%; /* Optional: prevent overflow on small screens */
+   /*TODO smaller 800 vertical stack*/
+
+}
+
+.footer {
+  background-color: #090909e5;
+  margin:0;
+  padding:0;
+  gap: 0;
+  backdrop-filter: blur(10px);
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: rgb(218, 218, 218);
+  font-size: clamp(5px,1.5vw,20px);
+  height: fit-content;
+  min-width: 300px;
+  max-width: 100%; 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer.show {
+  transform: translateY(0);
+}
+.box iframe {
+  width: 100%;
+  min-width: 200px;
+  aspect-ratio: 16 / 9;
+  gap: 0;
+  
+}
+
+.box p {
+  color:white;
+  font-size: clamp( 10px, 1vw,100px);
+
+}
+
+.spacer {
+  height: 10vw;
+}
+.smallspacer {
+  height: 50px;
+}
+.flexspacer{
+  flex: 1; /* container takes remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+    .steam-btn {
+      margin: 2vw 0rem 0rem 0rem;
+      background-color: #171a21;
+      color: white;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.175rem;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: clamp(19px, 1.5vw, 100px);
+    }
+
+    .steam-btn:hover {
+      background-color: #1b2838;
+      color: white;
+    }
+
+    .steam-logo {
+      height: 30px;
+      width: 30px;
+      margin-right: 8px;
+    }
+.image-wrapper {
+  flex: 1 1 0;          /* Flex-grow to fill evenly, no fixed width */
+  margin: 0px 5px 0px 0px;    /* Margin between images */
+  /* max-width: 20%;       Max 20% so 5 images fit nicely */
+  box-sizing: border-box;
+}
+
+
+.image-wrapper:last-child {
+  margin-right: 0;      /* Remove right margin on the last image */
+}
+
+
+  .image-wrapper img {
+    
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    will-change: transform;
+  }
+
+.image-wrapper-small {
+  
+  flex: 1 1 0;          /* Flex-grow to fill evenly, no fixed width */
+  margin: 0px 5px 0px 0px;    /* Margin between images */
+  /* max-width: 20%;       Max 20% so 5 images fit nicely */
+  box-sizing: border-box;
+  display:none!important;
+}
+
+
+.image-wrapper-small:last-child {
+  margin-right: 0;      /* Remove right margin on the last image */
+}
+
+
+  .image-wrapper-small img {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    will-change: transform;
+  }
+
+/* Modal base styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: cyan;
+    }
+.modal-content-box {
+  position: relative;
+  background: #ffffff00;
+  padding: 0rem;
+  border-radius: 10px;
+  max-width: 70vw;
+  aspect-ratio: 16/9;
+  overflow: auto;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content-box {
+  transform: scale(1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 0vw;
+  right: 0vw;
+  font-size: 4vw;
+  border: none;
+  background: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 0 10px;
+  margin: 0;
+
+  z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: rgb(255, 255, 255);
+}
+ .nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4vw;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 0 10px;
+  z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: rgb(255, 255, 255);
+}
+
+.prev-btn {
+  left: 0.5%; /* scales with screen width */
+}
+
+.next-btn {
+  right: 0.5%; /* scales with screen width */
+}
+
+.social-buttons {
+  display: flex;
+  gap: 0.2rem;
+  margin: 0.2rem;
+  margin-right: 0.4rem;
+}
+
+.social-button {
+  width: clamp(20px,3vw,48px);
+  height: clamp(20px,3vw,48px);
+  background: rgba(255, 255, 255, 0.08); /* subtle translucent effect */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: clamp(10px, 1.5vw,24px);
+  transition: background 0.3s ease;
+}
+
+.social-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: cyan;
+}
+
+
+
+
+
+
+.tag-box {
+  background-color: #133030;
+  color: cyan;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.175rem;
+  margin: 5px 0px  0px 5px;
+  font-size: clamp( 9.6px, 0.75vw,100px);
+}
+
+
+
+
+.left-content {
+  width : 60%;
+}
+
+.right-content {
+  width : 40%;
+}
+
+.mobile{
+  display: none;
+}
+
+
+/* Responsive layout below 800px */
+@media (max-width: 888.8888px) {
+
+
+  .left-content, .right-content {
+    width: 100%;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+
+  /* Reorder elements: logo on top, text, video, buttons last */
+  .right-content {
+    order: -1; /* Move right-content above video */
+  }
+
+  .box {
+
+    width:90%;
+    min-width: 0%; /* Optional: prevent overflow on small screens */
+   /*TODO smaller 800 vertical stack*/
+  }
+
+ .container {
+  margin: 0;
+  padding: 0;
+ }
+ .image-wrapper {
+  display: none !important;
+}
+.image-wrapper-small {
+  display:block!important;
+
+}
+.box p {
+  font-size: clamp( 12.8px, 3vw,100px);
+
+}
+.tag-box {
+  font-size: clamp( 9.6px, 2.25vw,100px);
+}
+
+ .footer {
+    flex-direction: column;
+    text-align: center;  /* center text on small screens */
+    font-size: clamp(12px,2vw,16px);
+  }
+  .footer img {
+    max-width: 40%;
+    margin-top: 10px
+  }
+  .footer > .col {
+    justify-content: center !important; /* center content horizontally */
+    margin: 10px 0; /* add vertical spacing between rows */
+  }
+
+  /* Optional: center social buttons and logo nicely */
+  .footer-image {
+    max-width: 150px; /* adjust size on smaller screens */
+  }
+  .social-button {
+  width: clamp(20px,12vw,48px);
+  height: clamp(20px,12vw,48px);
+  font-size: clamp(10px, 6vw,24px);
+}
+.spacer {
+  height: 25vw;
+}
+
+}
