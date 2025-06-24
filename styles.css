@@ -9,7 +9,7 @@ body, html {
 
 /* Layer 1: Background */
 .background-layer {
-  background: url('PypeGamesWebsite/Banner2.png') no-repeat center center fixed;
+  background: url('http://pypegames.com/Banner2.png') no-repeat center center fixed;
   background-size: cover;
   position: fixed;
   width: 100%;
@@ -19,7 +19,7 @@ body, html {
 }
 
 .mountain-layer {
-  background: url('PypeGamesWebsite/Mountains2.png') no-repeat center center fixed;
+  background: url('http://pypegames.com/Mountains2.png') no-repeat center center fixed;
   background-size: cover;
   position: fixed;
   width: 100%;
