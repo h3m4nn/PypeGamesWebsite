@@ -68,6 +68,7 @@ body, html {
   max-width: 48vw;
   height: auto;
   width: auto;
+  min-width: 350px;
 }
 .footer-image {
   max-height: 100%;
