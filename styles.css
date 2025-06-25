@@ -151,6 +151,9 @@ body, html {
 .spacer {
   height: 10vw;
 }
+.halfspacer {
+  height: 5vw;
+}
 .smallspacer {
   height: 50px;
 }
@@ -163,7 +166,7 @@ body, html {
 
     .steam-btn {
       margin: 2vw 0rem 0rem 0rem;
-      background-color: #171a21;
+      background-color: #0F1C30;
       color: white;
       border: none;
       display: inline-flex;
@@ -176,7 +179,7 @@ body, html {
     }
 
     .steam-btn:hover {
-      background-color: #1b2838;
+      background-color: #1385B6;
       color: white;
     }
 
@@ -410,11 +413,11 @@ a {
 
 }
 .box p {
-  font-size: clamp( 12.8px, 3vw,100px);
+  font-size: clamp( 10px, 1vw,100px);
 
 }
 .tag-box {
-  font-size: clamp( 9.6px, 2.25vw,100px);
+  font-size: clamp( 9.6px, 1vw,100px);
 }
 
  .footer {
