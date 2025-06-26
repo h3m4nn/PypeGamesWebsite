@@ -434,7 +434,7 @@ a {
 }
 .tag-box:first-child {
   margin-left: 4%; /* remove left margin on first tag */
-
+}
  .footer {
     flex-direction: column;
     text-align: center;  /* center text on small screens */
