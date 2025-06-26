@@ -1,6 +1,6 @@
 {
   "name": "PypeGames",
-  "short_name": "Pype",
+  "short_name": "PypeG",
   "icons": [
     {
       "src": "/icon/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#1c5152",
-  "background_color": "#222222",
+  "theme_color": "#092B33",
+  "background_color": "#092B33",
   "display": "standalone"
 }
