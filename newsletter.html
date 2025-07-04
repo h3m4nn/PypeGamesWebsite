@@ -43,6 +43,17 @@
   background: none !important;
   box-shadow: none !important;
 }
+.entry__field {
+  background-color: transparent !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+.entry__field:focus-within {
+  border: 1px solid #00ffff !important;
+}
   @font-face {
     font-display: block;
     font-family: Roboto;
@@ -101,7 +112,7 @@
 
 
 <!-- START - We recommend to place the below code where you want the form in your website html  -->
-<img src="backarrow.svg" alt="Back Arrow" style="width: 30px; height: 30px; position: absolute; top: 15px; left: 15px; cursor: pointer; filter: invert(100%) brightness(50%);" onclick="window.location.href='index.html'; ">
+<div class="back-arrow" onclick="window.location.href='index.html';"></div>
 <div class="sib-form" style="text-align: center;
          background-color: transparent;                                 ">
   <div id="sib-form-container" class="sib-form-container">
@@ -135,7 +146,7 @@
           <div class="sib-input sib-form-block">
             <div class="form__entry entry_block">
               <div class="form__label-row ">
-                <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#00ffff;" for="EMAIL" data-required="*">Enter your email adress to subscribe!</label>
+                <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#00ffff; " for="EMAIL" data-required="*">Enter your email adress to subscribe!</label>
 
                 <div class="entry__field">
                   <img src="email.svg" alt="Email Icon" style="width:20px; height:20px; vertical-align:middle; margin: 0px 8px; filter: invert(62%) sepia(19%) saturate(1042%) hue-rotate(134deg) brightness(92%) contrast(88%);" />
