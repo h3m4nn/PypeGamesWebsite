@@ -58,7 +58,8 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+    /* Responsive height instead of fixed 600px */
+  height: clamp(200px, 80vh, 600px);
   padding: 1rem;
   background-color: transparent;
 }
