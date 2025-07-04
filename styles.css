@@ -59,7 +59,7 @@ body, html {
   justify-content: center;
   align-items: center;
     /* Responsive height instead of fixed 600px */
-  height: clamp(200px, 80vh, 600px);
+  height: clamp(200px, 60vh, 600px);
   padding: 1rem;
   background-color: transparent;
 }
