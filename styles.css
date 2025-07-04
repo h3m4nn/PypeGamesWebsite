@@ -461,5 +461,10 @@ a {
 .spacer {
   height: 25vw;
 }
+  
+/* extra bottom padding for mobile view */
+.content-section {
+  padding-bottom: 50px;
+}
 
 }
