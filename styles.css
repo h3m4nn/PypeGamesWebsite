@@ -5,11 +5,13 @@ body, html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+
+  background-color: #039A9E; /* Fallback color */
 }
 
 /* Layer 1: Background */
 .background-layer {
-  background: url('Banner2.png') no-repeat center center fixed;
+  background: url('images/Background_Sky.png') no-repeat center center fixed;
   background-size: cover;
   position: fixed;
   width: 100%;
@@ -19,7 +21,7 @@ body, html {
 }
 
 .mountain-layer {
-  background: url('Mountains2.png') no-repeat center center fixed;
+  background: url('images/Background_Mountains.png') no-repeat center center fixed;
   background-size: cover;
   position: fixed;
   width: 100%;
@@ -116,7 +118,7 @@ body, html {
   top: 15px;
   left: 15px;
   cursor: pointer;
-  background-image: url('backarrow.svg');
+  background-image: url('webicons/backarrow.svg');
   background-size: cover;
   background-repeat: no-repeat;
   filter: invert(100%) brightness(50%);
@@ -128,7 +130,7 @@ body, html {
   top: 15px;
   left: 15px;
   cursor: pointer;
-  background-image: url('backarrow.svg');
+  background-image: url('webicons/backarrow.svg');
   background-size: cover;
   background-repeat: no-repeat;
   filter: invert(100%) brightness(70%);
@@ -312,12 +314,12 @@ a {
   position: absolute;
   top: 0vw;
   right: 0vw;
-  font-size: 4vw;
+  font-size: clamp(1.5rem, 4vw, 6rem);
   border: none;
   background: none;
   color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
-  padding: 0 10px;
+  padding: 0 2%;
   margin: 0;
 
   z-index: 10;
